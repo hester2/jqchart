@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background-color: #eee;
+			}
+
+			.gd-chart-nbs .layui-tab-title {
+				border: none !important;
+				display: flex;
+				flex-direction: column !important;
+				width: 200px !important;
+				height: auto !important;
+				background-color: #E1E1E1 !important;
+				box-sizing: border-box;
+				padding: 5px 5px;
+			}
+
+			.gd-chart-nbs .layui-tab-title .layui-this:after {
+				border: none !important
+			}
+
+			.gd-chart-nbs .layui-tab-content {
+				width: 500px !important;
+				background-color: #fff;
+				padding: 0px;
+			}
+
+			.gd-chart-nbs .layui-tab {
+				display: flex !important;
+				margin: 0px;
+			}
+
+			.gd-chart-nbs .layui-tab-title li {
+				font-size: 16px;
+				line-height: 44px;
+			}
+
+			.gd-chart-nbs {
+				width: 700px;
+				height: 600px;
+				display: flex;
+				box-shadow: 1px 1px 50px rgba(0, 0, 0, .3);
+				margin: 20px auto;
+			}
+
+			.gd-chart-nbs .layui-this {
+				background-color: #FCFCFC;
+				border-radius: 5px;
+			}
+
+			.gd-chart-nbs .layui-this:hover {
+				background-color: #FCFCFC !important;
+			}
+
+			.gd-chart-nbs .layui-tab-title li:hover {
+				background-color: #EAEAEA;
+			}
+
+			.gd-chart-oft li {
+				display: flex;
+			}
+
+			.gd-chart-nbs .layui-tab-title li {
+				text-align: left !important;
+				margin-bottom: 7px;
+				box-sizing: border-box;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+
+			.gd-chart-oft img {
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+			}
+
+			.gd-chart-oft span {
+				margin-left: 10px;
+				font-size: 16px;
+				color: #1E1E1E;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.gd-chart-hof {
+				width: 100%;
+				height: 80px;
+				box-sizing: border-box;
+				padding: 15px 17px;
+				background-color: #F8F8F8;
+			}
+
+			.gd-chart-left {
+				float: left;
+			}
+
+			.gd-chart-right {
+				float: right;
+				height: 60px;
+			}
+
+			.gd-chart-left img {
+				width: 50px;
+				height: 50px;
+				border-radius: 100%;
+			}
+
+			.gd-chart-left span {
+				font-size: 18px;
+				color: #444;
+				margin-left: 8px;
+			}
+
+			.gd-chart-right span {
+				display: block;
+				width: 14px;
+				height: 2px;
+				background-color: #2E2D3C;
+			}
+
+			.gd-chart-nbs .layui-tab-item {
+				height: 500px;
+			}
+
+			/* 消息 */
+			.gd-chart-box {
+				width: 100%;
+				height: 100%;
+			}
+
+			.gd-chart-inTer {
+				width: 100%;
+				height: 300px;
+				margin-top: 10px;
+				overflow-y: auto;
+				box-sizing: border-box;
+				padding: 20px 15px;
+			}
+
+
+			#osBtn {
+				display: block;
+				float: right;
+				margin-right: 10px;
+			}
+
+			.gd-chart-inTer p {
+				display: inline-block;
+				border-radius: 5px;
+				background: #dcdcdc;
+				font-size: 12px;
+				padding: 5px 5px;
+				margin: 5px 0;
+				margin-left: 5px;
+				max-width: 140px;
+				word-wrap: break-word;
+			}
+
+			.gd-chart-send {
+				height: 165px;
+				width: 100%;
+				border-top: 1px solid #F1F1F1;
+				box-sizing: border-box;
+				padding: 12px 15px;
+			}
+
+			.gd-chart-send textarea {
+				display: block;
+				width: 100%;
+				height: 110px;
+				margin-top: 5px;
+				text-align: left;
+				border: none;
+				color: #333;
+				font-family: \5FAE\8F6F\96C5\9ED1;
+			}
+
+			.gd-chart-box .layui-btn {
+				height: 30px !important;
+				line-height: 30px !important;
+			}
+
+			.gd-chart-ofo {
+				display: flex;
+				margin-bottom: 10px;
+			}
+
+			.gd-chart-ofo img {
+				width: 36px;
+				height: 36px;
+				border-radius: 100%;
+			}
+
+			.gd-chart-ofe {
+				display: flex;
+				margin-bottom: 10px;
+				justify-content: flex-end;
+			}
+
+			.gd-chart-ofe img {
+				width: 36px;
+				height: 36px;
+				border-radius: 100%;
+			}
+
+			.gd-chart-emoji img {
+				width: 28px;
+				height: 28px;
+			}
+
+			.gd-chart-pl {
+				background-color: yellowgreen !important;
+				clear: both;
+				float: right;
+				margin-right: 5px !important;
+			}
+
+			.jh {
+				background-color: yellowgreen !important;
+				clear: both;
+				float: right;
+				margin-right: 5px !important;
+			}
+			.gd-chart-nbs .layui-textarea{
+				padding: 6px 0px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css.1/layui.css" />
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+		<script src="js/emoji_jQuery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/modules/element.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/modules/layer.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script>
+			//注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+			layui.use('element', function() {
+				var element = layui.element;
+
+				//…
+			});
+		
+		</script>
+		<div class="gd-chart-nbs">
+			<div class="layui-tab">
+				<ul class="layui-tab-title">
+					<li class="gd-chart-oft layui-this">
+						<img src="img/icon-chart.png">
+						<span>在线客服1</span>
+					</li>
+					<li class="gd-chart-oft">
+						<img src="img/icon-chart.png">
+						<span>在线客服2</span>
+					</li>
+				</ul>
+				<div class="layui-tab-content">
+					<div class="gd-chart-hof">
+						<div class="gd-chart-left">
+							<img src="img/icon-chart.png">
+							<span>在线客服1</span>
+						</div>
+						<div class="gd-chart-right">
+							<span></span>
+						</div>
+					</div>
+					<div class="layui-tab-item layui-show">
+						<div class="gd-chart-box">
+							<div class="gd-chart-inTer" id="father">
+								<div class="gd-chart-ofo">
+									<img src="img/icon-chart.png">
+									<p class="gd-chart-p" id="hj">你好</p>
+								</div>
+								<div class="gd-chart-ofo">
+									<img src="img/icon-chart.png">
+									<p class="gd-chart-p">heiheiheiheiehieheieheieheieheiheiehe</p>
+								</div>
+								<div class="gd-chart-ofe">
+									<p class="gd-chart-pl">er</p>
+									<img src="img/icon-chart.png">
+								</div>
+							</div>
+							<div class="gd-chart-send">
+								<div class="gd-chart-emoji">
+									<img src="img/icon-chart-2.png" id="btn">
+								</div>
+								<textarea name="desc" style="resize: none;" placeholder="" id="txt" class="layui-textarea"></textarea>
+							</div>
+							<button type="button" id="osBtn" class="layui-btn ">发送</button>
+						</div>
+					</div>
+					<div class="layui-tab-item">内容2</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$.Lemoji({
+		emojiInput: '#txt',
+		emojiBtn: '#btn',
+		position: 'LEFTBOTTOM',
+		length: 8,
+		emojis: {
+			qq: {
+				path: 'static/images/qq/',
+				code: ':',
+				name: 'QQ表情'
+			},
+			tieba: {
+				path: 'static/images/tieba',
+				code: ';',
+				name: "贴吧表情"
+			},
+			emoji: {
+				path: 'static/images/emoji',
+				code: ',',
+				name: 'Emoji表情'
+			}
+		}
+	});
+	// 发送消息
+	var osBtn = document.getElementById("osBtn");
+	var txt = document.getElementById("txt");
+	var father = document.getElementById("father")
+	var p = document.getElementsByClassName(".gd-chart-p");
+	osBtn.onclick = function() {
+		if (txt.value == "") {
+			layer.msg('请勿发送空消息');
+			return;
+		} else {
+			var content = $('#txt').val();
+			content = $.emojiParse({
+				content: content,
+				emojis: [{
+						type: 'qq',
+						path: 'static/images/qq/',
+						code: ':'
+					},
+					{
+						path: 'static/images/tieba/',
+						code: ';',
+						type: 'tieba'
+					},
+					{
+						path: 'static/images/emoji/',
+						code: ',',
+						type: 'emoji'
+					}
+				]
+			});
+
+			var _src = 'https://tp1.sinaimg.cn/5619439268/180/40030060651/1'
+			var divItem = document.createElement('div')
+			divItem.setAttribute('class', 'gd-chart-ofe')
+
+			var imgItem = document.createElement("img");
+			imgItem.setAttribute('src', _src)
+			imgItem.setAttribute('class', 'gd-chart-ig')
+
+			var son = document.createElement("p");
+			son.setAttribute('class', 'gd-chart-pl')
+
+			var texLength = $('#txt').val()
+			if (texLength[1] == ':') {
+				var jk_img = document.createElement('div')
+				jk_img.setAttribute('class', 'jh')
+				divItem.appendChild(jk_img)
+				son.style.display = "none";
+				jk_img.innerHTML = content
+			} else if (texLength[1] == ';') {
+				var jk_img = document.createElement('div')
+				jk_img.setAttribute('class', 'jh')
+				divItem.appendChild(jk_img)
+				son.style.display = "none";
+				jk_img.innerHTML = content
+			} else if (texLength[1] == ',') {
+				var jk_img = document.createElement('div')
+				jk_img.setAttribute('class', 'jh')
+				divItem.appendChild(jk_img)
+				son.style.display = "none";
+				jk_img.innerHTML = content
+			}
+
+			divItem.appendChild(son)
+			divItem.appendChild(imgItem)
+
+			son.innerText = txt.value;
+			father.appendChild(divItem);
+			txt.value = "";
+			son.scrollIntoView();
+
+		}
+
+	}
+	document.onkeydown = function(evt) {
+		var e = evt || event;
+		e.keyCode = e.which = e.charCode;
+		if (e.keyCode == 13 || e.keyCode == 10) {
+			if (txt.value == "") {
+				layer.msg('请勿发送空消息');
+				return false;
+			} else {
+				var content = $('#txt').val();
+				content = $.emojiParse({
+					content: content,
+					emojis: [{
+							type: 'qq',
+							path: 'static/images/qq/',
+							code: ':'
+						},
+						{
+							path: 'static/images/tieba/',
+							code: ';',
+							type: 'tieba'
+						},
+						{
+							path: 'static/images/emoji/',
+							code: ',',
+							type: 'emoji'
+						}
+					]
+				});
+
+				var _src = 'https://tp1.sinaimg.cn/5619439268/180/40030060651/1'
+				var divItem = document.createElement('div')
+				divItem.setAttribute('class', 'gd-chart-ofe')
+
+				var imgItem = document.createElement("img");
+				imgItem.setAttribute('src', _src)
+				imgItem.setAttribute('class', 'gd-chart-ig')
+
+				var son = document.createElement("p");
+				son.setAttribute('class', 'gd-chart-pl')
+
+				var texLength = $('#txt').val()
+				if (texLength[1] == ':') {
+					var jk_img = document.createElement('div')
+					jk_img.setAttribute('class', 'jh')
+					divItem.appendChild(jk_img)
+					son.style.display = "none";
+					jk_img.innerHTML = content
+				} else if (texLength[1] == ';') {
+					var jk_img = document.createElement('div')
+					jk_img.setAttribute('class', 'jh')
+					divItem.appendChild(jk_img)
+					son.style.display = "none";
+					jk_img.innerHTML = content
+				} else if (texLength[1] == ',') {
+					var jk_img = document.createElement('div')
+					jk_img.setAttribute('class', 'jh')
+					divItem.appendChild(jk_img)
+					son.style.display = "none";
+					jk_img.innerHTML = content
+				}
+
+				divItem.appendChild(son)
+				divItem.appendChild(imgItem)
+
+				son.innerText = txt.value;
+				father.appendChild(divItem);
+				txt.value = "";
+				son.scrollIntoView();
+
+			}
+		}
+	}
+</script>

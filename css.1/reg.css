@@ -1,0 +1,376 @@
+.mb {
+	width: 1198px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	min-height: 600px;
+}
+
+.gd-reg-step {
+	width: 495px;
+	margin: 40px auto;
+}
+
+.gd-reg-step .wz {
+	height: 32px;
+	line-height: 32px;
+	color: #525252;
+	font-size: 16px;
+}
+
+.gd-reg-step .bg {
+	height: 32px;
+	background: url(img/progress/progress00.png) no-repeat center;
+}
+
+.gd-reg-step .bg1 {
+	height: 32px;
+	background: url(img/yhzc-step-bg2.png) no-repeat center;
+}
+
+.gd-reg-list {}
+
+.gd-reg-center {
+	width: 500px;
+	margin: auto;
+}
+
+.layui-input-block button {
+	background-color: #ff5722 !important;
+	width: 330px !important;
+}
+
+.gd-reg-list .gd-reg-left {
+	width: 340px;
+	float: left;
+	padding: 0 137px 0 122px;
+	margin: 15px 0 50px;
+	border-right: 1px solid #ddd;
+	position: relative;
+}
+
+.gd-reg-list .gd-reg-left ul {
+	width: 340px;
+	margin: 0 auto;
+}
+
+.gd-reg-list .gd-reg-left ul li {
+	color: #bbb;
+	float: left;
+	height: 60px;
+	position: relative;
+	width: 340px;
+}
+
+.gd-reg-list .gd-reg-left ul li .txt {
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	box-shadow: 0 1px 0 #fafafa;
+	float: left;
+	font-size: 14px;
+	height: 20px;
+	outline: medium none;
+	overflow: hidden;
+	padding: 10px 0 10px 40px;
+	position: relative;
+	width: 298px;
+}
+
+.gd-reg-list .gd-reg-left ul li.enter-focus .txt {
+	border: 1px solid #f60;
+	-moz-box-shadow: 0 1px 0 #ffdfc9;
+	-webkit-box-shadow: 0 1px 0 #ffdfc9;
+	box-shadow: 0 1px 0 #ffdfc9;
+}
+
+.gd-reg-list .gd-reg-left ul li b {
+	background: url(../img/passport-icon.png) no-repeat;
+	display: block;
+	left: 10px;
+	position: absolute;
+	width: 18px;
+	z-index: 10;
+}
+
+.gd-reg-list .gd-reg-left ul li b.user-name {
+	height: 18px;
+	background-position: 0 0;
+	top: 11px;
+}
+
+.gd-reg-list .gd-reg-left ul li b.login-password {
+	height: 20px;
+	background-position: 0 -25px;
+	top: 10px;
+}
+
+.gd-reg-list .gd-reg-left ul li b.login-code {
+	height: 20px;
+	background-position: 0 -108px;
+	top: 10px;
+}
+
+.gd-reg-list .gd-reg-left ul li.enter-focus b.user-name {
+	background-position: -25px 0;
+}
+
+.gd-reg-list .gd-reg-left ul li.enter-focus b.login-password {
+	height: 20px;
+	background-position: -25px -25px;
+}
+
+.gd-reg-list .gd-reg-left ul li.enter-focus b.login-code {
+	height: 20px;
+	background-position: -25px -108px;
+	top: 10px;
+}
+
+.gd-reg-list .gd-reg-left ul li em {
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	position: absolute;
+	left: 42px;
+	top: 11px;
+	*top: 12px;
+	font-size: 14px;
+	font-style: normal;
+}
+
+.gd-reg-list .gd-reg-left ul li .sendsms {
+	width: 145px;
+	height: 42px;
+	border: 0px;
+	background-color: #ff6600;
+	font-size: 14px;
+	color: #fff;
+	margin-left: 10px;
+	cursor: pointer;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.gd-reg-list .gd-reg-left ul li .notclick {
+	background-color: #e2e2e2;
+	color: #4c4c4c;
+	cursor: default;
+}
+
+.gd-reg-list .gd-reg-left ul .yzm input {
+	width: 150px;
+}
+
+.gd-reg-list .gd-reg-left ul .yzm img {
+	width: 50px;
+	height: 30px;
+	margin-top: 6px;
+	margin-left: 5px;
+}
+
+.gd-reg-list .gd-reg-left ul .cbx input {
+	position: relative;
+	top: 3px;
+}
+
+.gd-reg-list .gd-reg-left ul .cbx label {
+	color: #999;
+	margin-left: 5px;
+}
+
+.gd-reg-list .gd-reg-left ul .cbx label a {
+	color: #003399;
+	font-family: 宋体;
+}
+
+.gd-reg-list .gd-reg-left ul li .orange {
+	color: #ffb98a;
+}
+
+.gd-reg-list .gd-reg-left ul li span {
+	position: absolute;
+	left: 0;
+	bottom: 8px;
+	font-size: 14px;
+}
+
+.gd-reg-list .gd-reg-left ul .nav {
+	font-size: 24px;
+	color: #5d5d5d;
+	margin: 29px 0 15px;
+	text-align: center;
+	font-family: 微软雅黑;
+}
+
+.gd-reg-list .gd-reg-left ul .left {
+	width: 80px;
+	height: 29px;
+	line-height: 29px;
+	float: left;
+	text-align: right;
+	color: #808080;
+	font-size: 13px;
+}
+
+.gd-reg-list .gd-reg-left ul .left font {
+	color: #f86300;
+	font-size: 14px;
+}
+
+.gd-reg-list .gd-reg-left ul .btn input {
+	width: 279px;
+	height: 48px;
+	background-color: #ff5722;
+	font-size: 24px;
+	margin-top: 6px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	margin-left: 30px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.gd-reg-list .gd-reg-right {
+	width: 380px;
+	float: left;
+	padding: 0 116px 0 102px;
+	margin: 15px 0 50px;
+}
+
+.gd-reg-list .gd-reg-right .lxwm {
+	width: 380px;
+	height: 193px;
+	background-color: #e2e2e2;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	float: left;
+	margin-top: 30px;
+}
+
+.gd-reg-list .gd-reg-right .lxwm .ewm {
+	width: 148px;
+	height: 148px;
+	background-color: #fff;
+	margin: 23px 15px 23px 23px;
+	float: left;
+}
+
+.gd-reg-list .gd-reg-right .lxwm ul {
+	width: 180px;
+	float: left;
+	margin-top: 23px;
+}
+
+.gd-reg-list .gd-reg-right .lxwm ul li {
+	text-align: center;
+	color: #525252;
+	font-size: 14px;
+	line-height: 23px;
+}
+
+.gd-reg-list .gd-reg-right .lxwm ul li.title {
+	font-size: 16px;
+	color: #5876c6;
+	padding-bottom: 20px;
+}
+
+.layui-btn {
+	background-color: transparent !important;
+	color: #000 !important;
+}
+
+/* 新增 */
+.lbOverlay {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	zoom: 1;
+	background: #2f2e2e;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	filter: alpha(opacity=50);
+	/*IE滤镜，透明度50%*/
+	-moz-opacity: 0.5;
+	/*Firefox私有，透明度50%*/
+	opacity: 0.5;
+	/*其他，透明度50%*/
+}
+
+.hidden_pro_au {
+	display: none;
+	background: #fff;
+	text-align: left;
+	width: 800;
+	height: 733;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999999;
+}
+
+.fied-box {
+	background-color: #fff;
+	height: 50px;
+	width: 800px;
+	border-top: 1px solid #e6e6e6;
+}
+
+.fied-box button {
+	float: right;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #FF5722;
+	color: #fff;
+	margin-top: 10px;
+	border: none !important;
+	margin-right: 20px;
+}
+
+.img_close {
+	width: 20px;
+	height: 20px;
+	float: right;
+	margin-right: 20px;
+}
+
+input[type=checkbox]{
+     cursor: pointer;
+     position: relative;
+     width: 15px;
+     height: 15px;
+     font-size: 14px;
+}
+
+input[type=checkbox]::after{
+     position: absolute;
+     top: 0;
+     background-color: #fff;
+     color: #000;
+	 border:1px solid #E2E2E2;
+     width: 15px;
+     height: 15px;
+     display: inline-block;
+     visibility: visible;
+     padding-left: 0px;
+     text-align: center;
+     content: ' ';
+     border-radius: 3px
+}
+        
+input[type=checkbox]:checked::after{
+     content: "✓";
+     font-size: 12px;
+     font-weight: bold;
+	 background-color: #009F95;
+	 color: #fff !important;
+	 border:none;
+}
